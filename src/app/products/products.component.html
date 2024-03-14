@@ -6,7 +6,7 @@
         <ul class="list-group" *ngIf="product; else noproduct">
             <li class="list-group-item" *ngFor="let prod of product" [routerLink]="prod.id" (click)="forproductid(prod.id)"
             [ngClass]="{active:prod.id === productid}">
-        <strong>{{prod.pname}} and {{prod.pdetails}}</strong>
+        <strong>{{prod.pname}} and {{prod.pdetails}} and status {{prod.pstatus}}</strong>
             </li>
         
         </ul>

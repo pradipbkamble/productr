@@ -15,6 +15,7 @@ const routes: Routes = [
     {
         path: 'products',
         component: ProductsComponent,
+        title:'productcomponenet',
         children: [{
             // path: 'products/:prodid/addcomp',
             path: ':prodid/addcomp',
@@ -31,7 +32,8 @@ const routes: Routes = [
     },
     {
         path: 'about',
-        component: AboutComponent
+        component: AboutComponent,
+        title:"aboutcomponent"
     }
 ]
 
