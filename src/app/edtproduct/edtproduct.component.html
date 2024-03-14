@@ -1,0 +1,22 @@
+<form [formGroup]="selectform">
+    <div class="form-group">
+        <label for="pname">pname</label>
+        <input type="pname" class="form-control" formControlName="pname">
+    </div>
+    <div class="form-group">
+        <label for="pdetails">pdetails</label>
+        <input type="pdetails" class="form-control" formControlName="pdetails">
+    </div>
+    <div class="form-group">
+        <!-- <label for="pstatus">pstatus</label>
+        <input type="pstatus" class="form-control" formControlName="pstatus"> -->
+        <select name="pstatus" id="pstatus" class="form-control" >
+            <option value="Inprocess">Inprocess</option>
+            <option value="Dispatched">Dispatched</option>
+            <option value="Deliver">Deliver</option>
+        </select>
+    </div>
+    <button mat-raised-button color="accent" (click)="onupdate()" class="my-4">update</button>
+    <button mat-raised-button color="accent"[routerLink]="['/products']"  class="m-4">back</button>
+</form>
+

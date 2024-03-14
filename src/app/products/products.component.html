@@ -1,0 +1,24 @@
+<div class=" text-right">
+    <button mat-raised-button color="accent" [routerLink]="['/products/:prodid/addcomp']" (click)="onadd()"  class="m-4">AddProduct</button>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <ul class="list-group" *ngIf="product; else noproduct">
+            <li class="list-group-item" *ngFor="let prod of product" [routerLink]="prod.id" (click)="forproductid(prod.id)"
+            [ngClass]="{active:prod.id === productid}">
+        <strong>{{prod.pname}} and {{prod.pdetails}}</strong>
+            </li>
+        
+        </ul>
+        <ng-template  #noproduct>
+            <p class="aleet aletr-info">
+                no product id
+            </p>
+            </ng-template>
+    </div>
+    <div class="col-md-6">
+        <router-outlet>
+
+        </router-outlet>
+    </div>
+</div>
